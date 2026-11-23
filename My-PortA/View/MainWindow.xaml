@@ -1,0 +1,51 @@
+﻿<Window x:Class="My_PortA.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:My_PortA"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    
+    <Grid Margin="30">
+
+        <!--Cop/paste for comment -->
+        <!-- -->
+
+        <!-- Naming the frame so pages can open and collapse -->
+        <Frame x:Name="MainFrame" Visibility="Collapsed" NavigationUIVisibility="Hidden" />
+
+        <Grid x:Name="HomePageGrid">
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+
+            </Grid.RowDefinitions>
+
+
+            <!-- Heading -->
+            <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Foreground="SteelBlue" Text="OFP Ressources" FontSize="40" FontWeight="Heavy" FontFamily="Verdana" HorizontalAlignment="Center" Margin="20"/>
+
+            <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+                <!-- First two buttons -->
+                <Button Content="Produktliste" Width="140" Height="30" FontFamily="Verdana"  Margin="10" />
+                <Button Content="xxxx" Width="140" Height="30" FontFamily="Verdana" Margin="10"/>
+
+            </StackPanel>
+
+            <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+                <!-- Next two buttons-->
+                <Button Content="xxxx" Width="140" Height="30" FontFamily="Verdana" Margin="10" />
+                <Button Content="xxxx" Width="140" Height="30" FontFamily="Verdana" Margin="10"/>
+
+            </StackPanel>
+
+
+        </Grid>
+
+    </Grid>
+</Window>
