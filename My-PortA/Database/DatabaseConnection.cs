@@ -15,7 +15,7 @@ namespace My_PortA.Database
 
        public static async void OpenConnectionAsync() 
         {
-            string connectionString = "Data Source=gruppe6.database.windows.net;Persist Security Info=False;User ID=ProgramUser;Pooling=False;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=True;Application Name=\"SQL Server Management Studio\";Command Timeout=0";
+            string connectionString = "Server = tcp:gruppe6.database.windows.net,1433;" + "Initial Catalog=DIT_DATABASENAVN;" + "User ID=ProgramUser;" + "Password=porta123!!;" + "Encrypt=True;TrustServerCertificate=False;Connection Timeout=60;"; 
 
             await using var connection = new SqlConnection(connectionString);
 
