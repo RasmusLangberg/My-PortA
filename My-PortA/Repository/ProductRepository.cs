@@ -4,7 +4,7 @@ using System.Text;
 
 namespace My_PortA.Repository
 {
-    public class ProductRepos : IProductRepository
+    public class ProductRepository : IProductRepository
     {
         public Task CreateProduct(string name, string size, string description, string material, string COO)
         {
