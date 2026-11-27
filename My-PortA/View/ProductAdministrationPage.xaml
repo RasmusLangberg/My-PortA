@@ -1,0 +1,53 @@
+﻿<Page x:Class="My_PortA.View.ProductAdministrationPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Produktadministration"
+      Background="#F5F7FA">
+
+    <Grid Margin="30">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Overskrift -->
+        <TextBlock Text="Produktadministration"
+                   FontSize="28"
+                   FontWeight="Bold"
+                   Foreground="#477FA8"
+                   Margin="0,0,0,25"/>
+
+        <!-- Handlingsknapper -->
+        <StackPanel Grid.Row="1"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Left">
+
+            <Button Content="Tilføj produkt"
+                    Width="190"
+                    Height="35"
+                    Margin="0,0,0,10"/>
+
+            <Button Content="Rediger produkt"
+                    Width="190"
+                    Height="35"
+                    Margin="0,0,0,10"/>
+
+            <Button Content="Slet produkt"
+                    Width="190"
+                    Height="35"/>
+
+        </StackPanel>
+
+        <!-- Tilbage-knap -->
+        <Button Grid.Row="2"
+                Content="Tilbage"
+                Width="190"
+                Height="35"
+                HorizontalAlignment="Left"
+                Margin="0,15,0,0"/>
+
+    </Grid>
+
+</Page>

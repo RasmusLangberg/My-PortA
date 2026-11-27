@@ -1,0 +1,91 @@
+﻿<Page x:Class="My_PortA.View.ProductPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Produktliste"
+      Background="#F5F7FA">
+
+    <Grid Margin="30">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+
+        <!-- Overskrift -->
+        <TextBlock Text="Produktoversigt"
+                   FontSize="28"
+                   FontWeight="Bold"
+                   Foreground="#477FA8"
+                   Margin="0,0,0,25"/>
+
+        <!-- Søgefelt og opret-knap -->
+        <Grid Grid.Row="1" Margin="0,0,0,20">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBox Grid.Column="0"
+                     Height="40"
+                     Width="300"
+                     HorizontalAlignment="Left"
+                     VerticalContentAlignment="Center"
+                     FontSize="14"
+                     Padding="10"
+                     ToolTip="Søg efter produkt" TextChanged="TextBox_TextChanged"/>
+
+            
+
+        </Grid>
+
+        <!-- Produktoversigt -->
+        <DataGrid Grid.Row="2"
+                  AutoGenerateColumns="False"
+                  CanUserAddRows="False"
+                  IsReadOnly="True"
+                  HeadersVisibility="Column"
+                  GridLinesVisibility="Horizontal"
+                  MinHeight="250"
+                  Background="White"
+                  BorderBrush="#D9E1E8"
+                  BorderThickness="1"
+                  RowHeight="40"
+                  ColumnHeaderHeight="40"
+                  HorizontalScrollBarVisibility="Auto"
+                  VerticalScrollBarVisibility="Auto" SelectionChanged="DataGrid_SelectionChanged">
+
+            <DataGrid.Columns>
+
+                <DataGridTextColumn Header="xxxx"
+                                    Binding="{Binding Id}"
+                                    Width="100"/>
+
+                <DataGridTextColumn Header="xxxx"
+                                    Binding="{Binding Name}"
+                                    Width="180"/>
+
+                <DataGridTextColumn Header="xxxx"
+                                    Binding="{Binding Size}"
+                                    Width="120"/>
+
+                <DataGridTextColumn Header="xxxx"
+                                    Binding="{Binding Description}"
+                                    Width="*"
+                                    MinWidth="180"/>
+
+                <DataGridTextColumn Header="xxxx"
+                                    Binding="{Binding Quantity}"
+                                    Width="100"/>
+
+            </DataGrid.Columns>
+
+        </DataGrid>
+        <Button Grid.Row="3" Content="Tilbage" Width="190" Height="35" HorizontalAlignment="Left" Margin="0,15,0,0" Click="Tilbage_Click"/>
+
+    </Grid>
+
+</Page>

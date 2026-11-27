@@ -20,5 +20,20 @@ namespace My_PortA
         {
             InitializeComponent();
         }
+        private void Produktoversigt_Click(object sender, RoutedEventArgs e)
+        {
+            HomePageGrid.Visibility = Visibility.Collapsed;
+            MainFrame.Visibility = Visibility.Visible;
+            MainFrame.Navigate(new My_PortA.View.ProductPage());
+
+        }
+        public void VisHovedMenu()
+        {
+            MainFrame.Visibility = Visibility.Collapsed;
+            HomePageGrid.Visibility = Visibility.Visible;
+
+        }
+
+       
     }
 }
